@@ -1,0 +1,53 @@
+# Uploaded media files
+uploads/*
+!uploads/.gitkeep
+
+# Keep upload subdirectory placeholders
+!uploads/hero/
+uploads/hero/*
+!uploads/hero/.gitkeep
+
+!uploads/blog/
+uploads/blog/*
+!uploads/blog/.gitkeep
+!uploads/blog/gallery/
+uploads/blog/gallery/*
+!uploads/blog/gallery/.gitkeep
+
+!uploads/programs/
+uploads/programs/*
+!uploads/programs/.gitkeep
+
+!uploads/logo/
+uploads/logo/*
+!uploads/logo/.gitkeep
+
+!uploads/testimonials/
+uploads/testimonials/*
+!uploads/testimonials/.gitkeep
+
+# Deploy scripts (contain credentials)
+deploy.ps1
+deploy.bat
+
+# Environment / sensitive config
+.env
+*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Logs
+*.log
+logs/
+
+# Node (if ever used)
+node_modules/
+dist/
+dist-ssr/

@@ -1,0 +1,23 @@
+# Enable RewriteEngine
+RewriteEngine On
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Add trailing slash
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME} !\.
+RewriteRule ^(.*)$ %{REQUEST_URI}/ [L,R=301]
+
+# Protect config files
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "db.php">
+    Order allow,deny
+    Deny from all
+</Files>
